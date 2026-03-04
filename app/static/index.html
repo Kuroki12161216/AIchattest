@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>店舗診断ダッシュボード</title>
+  <style>
+    body { font-family: sans-serif; margin: 24px; background: #f6f8fb; color: #222; }
+    h1 { margin-bottom: 8px; }
+    .panel { background: #fff; border-radius: 12px; padding: 16px; margin-bottom: 18px; box-shadow: 0 1px 3px rgba(0,0,0,.08); }
+    table { width: 100%; border-collapse: collapse; }
+    th, td { border-bottom: 1px solid #e7ebf3; padding: 10px; text-align: left; font-size: 14px; }
+    th { background: #f2f5fb; }
+    .status-好調 { color: #0d9f57; font-weight: 700; }
+    .status-安定 { color: #0d6efd; font-weight: 700; }
+    .status-要改善 { color: #e45858; font-weight: 700; }
+    #chat-log { height: 220px; overflow-y: auto; background: #0f172a; color: #e2e8f0; border-radius: 8px; padding: 12px; }
+    .msg { margin-bottom: 10px; white-space: pre-wrap; }
+    .user { color: #7dd3fc; }
+    .bot { color: #86efac; }
+    .chat-row { display: flex; margin-top: 10px; gap: 8px; }
+    input { flex: 1; padding: 10px; border: 1px solid #cbd5e1; border-radius: 8px; }
+    button { padding: 10px 14px; border: 0; border-radius: 8px; background: #1d4ed8; color: #fff; cursor: pointer; }
+  </style>
+</head>
+<body>
+  <h1>店舗診断表（ダミーデータ）</h1>
+  <p>各店舗の売上・成長率・顧客満足度から診断結果を表示します。</p>
+
+  <div class="panel">
+    <table>
+      <thead>
+        <tr>
+          <th>店舗名</th>
+          <th>エリア</th>
+          <th>売上</th>
+          <th>目標</th>
+          <th>達成率</th>
+          <th>成長率</th>
+          <th>満足度</th>
+          <th>判定</th>
+          <th>推奨アクション</th>
+        </tr>
+      </thead>
+      <tbody id="diagnosis-body"></tbody>
+    </table>
+  </div>
+
+  <div class="panel">
+    <h2>AIチャットボット</h2>
+    <p>ダミーデータを参照して回答します。例: 「全店舗の一覧を教えて」「渋谷店の課題は？」</p>
+    <div id="chat-log"></div>
+    <div class="chat-row">
+      <input id="chat-input" placeholder="質問を入力してください" />
+      <button id="chat-send">送信</button>
+    </div>
+  </div>
+
+  <script src="./main.js"></script>
+</body>
+</html>
