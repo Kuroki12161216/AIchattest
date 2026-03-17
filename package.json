@@ -1,0 +1,10 @@
+{
+  "name": "store-dashboard",
+  "version": "1.0.0",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node app/server.js",
+    "test": "node --test tests/test_chatbot.js"
+  },
+  "dependencies": {}
+}
