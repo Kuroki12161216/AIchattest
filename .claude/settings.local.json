@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(node --test tests/test_chatbot.js)",
+      "Bash(gh pr:*)"
+    ]
+  }
+}
