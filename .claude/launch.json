@@ -6,6 +6,18 @@
       "runtimeExecutable": "node",
       "runtimeArgs": ["app/server.js"],
       "port": 8000
+    },
+    {
+      "name": "payitforward-hp",
+      "runtimeExecutable": "python",
+      "runtimeArgs": ["-m", "http.server", "8123", "--directory", "C:\\Users\\stn12\\payitforward-hp"],
+      "port": 8123
+    },
+    {
+      "name": "yoyaku-daicho",
+      "runtimeExecutable": "python",
+      "runtimeArgs": ["-m", "http.server", "8210", "--directory", "C:\\Users\\stn12\\yoyaku-daicho"],
+      "port": 8210
     }
   ]
 }
